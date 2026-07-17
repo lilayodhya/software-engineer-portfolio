@@ -49,7 +49,8 @@ export function Resume() {
           <SectionHeading index="03" eyebrow="Experience" title="A track record." />
           <motion.a
             href="/saarthakk-resume-new.pdf"
-            download="saarthakk-resume-new.pdf"
+            target="_blank"
+            rel="noreferrer"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -57,7 +58,7 @@ export function Resume() {
             className="mb-12 inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:bg-secondary md:mb-16"
           >
             <Download className="size-4" />
-            Download résumé
+            Open résumé
           </motion.a>
         </div>
 
