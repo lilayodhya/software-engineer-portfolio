@@ -27,7 +27,7 @@ const projects: Project[] = [
       '/projects/landmark1.png',
       '/projects/landmark2.png',
     ],
-    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
+    tags: ['React', 'Node.js', 'Tailwind CSS', 'Express', 'Supabase'],
   },
   {
     title: 'CargoIQ — Shipping volume & weight management dashboard',
@@ -38,9 +38,8 @@ const projects: Project[] = [
     images: [
       '/projects/cbm-calculator.png',
       '/projects/cbm-calculator1.png',
-      '/projects/cbm-calculator2.png',
     ],
-    tags: ['JavaScript', 'HTML', 'MSSQL', 'CSS'],
+    tags: ['React', 'Node.js', 'MS SQL Server', 'Tailwind CSS'],
   },
   {
     title: 'Minerva — GST Automation Tool',
@@ -49,11 +48,11 @@ const projects: Project[] = [
     description:
       'A full-stack web application that automates GST report generation for Indian businesses. The system accepts sales data in any CSV format, uses AI to intelligently map columns from any accounting software export (Tally, Zoho Books, QuickBooks, Busy Accounting), calculates CGST, SGST, and IGST across domestic and international transactions, and generates structured GSTR-1 and GSTR-3B Excel reports.',
     images: [
-      '/projects/gstr-report-automation.png',
-      '/projects/gstr-report-automation1.png',
-      '/projects/gstr-report-automation2.png',
+      '/projects/gst.png',
+      '/projects/gst1.png',
+      '/projects/gst2.png',
     ],
-    tags: ['JavaScript', 'Python', 'CSS', 'HTML', 'Gemini AI'],
+    tags: ['React', 'Python', 'CSS', 'HTML', 'Gemini AI'],
   },
   {
     title: 'ShiftSync — Overtime Report Analyzer',

@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const socials = [
   { label: 'Email', value: 'saarthakksuri@gmail.com', href: 'mailto:saarthakksuri@gmail.com' },
-  { label: 'GitHub', value: '@_____________', href: 'https://github.com' },
+  { label: 'GitHub', value: '@lilayodhya', href: 'https://github.com' },
   { label: 'LinkedIn', value: 'in/saarthakksuri', href: 'https://www.linkedin.com/in/saarthakk-suri-275424235' },
 ]
 

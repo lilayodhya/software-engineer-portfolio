@@ -44,7 +44,7 @@ export function Hero() {
       className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden px-6 pt-28 pb-16"
     >
       {/* 3D backdrop */}
-      <div className="pointer-events-none absolute inset-0 opacity-70">
+      <div className="absolute inset-0 opacity-70">
         <HeroCanvas />
       </div>
       {/* vignette */}
