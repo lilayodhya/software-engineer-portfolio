@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
@@ -11,8 +11,29 @@ type ProjectImageCarouselProps = {
   alt: string
 }
 
-function CarouselImage({ src, alt }: { src: string; alt: string }) {
+type ImageDimensions = {
+  width: number
+  height: number
+}
+
+const imageDimensions: Record<string, ImageDimensions> = {
+  '/projects/cbm-calculator.png': { width: 1918, height: 991 },
+  '/projects/cbm-calculator1.png': { width: 1919, height: 994 },
+  '/projects/landmark.png': { width: 2523, height: 1320 },
+  '/projects/overtime-report-analyzer.png': { width: 1919, height: 992 },
+  '/projects/overtime-report-analyzer1.png': { width: 1919, height: 993 },
+  '/projects/overtime-report-analyzer2.png': { width: 1915, height: 976 },
+}
+
+function CarouselImage({
+  src,
+  alt,
+}: {
+  src: string
+  alt: string
+}) {
   const [imageSrc, setImageSrc] = useState(src)
+  const dimensions = imageDimensions[imageSrc] ?? imageDimensions[src]
 
   return (
     <Image
@@ -20,8 +41,9 @@ function CarouselImage({ src, alt }: { src: string; alt: string }) {
       alt={alt}
       fill
       sizes="(max-width: 768px) 100vw, 50vw"
-      className="object-cover"
+      className="h-full w-full object-contain object-center"
       onError={() => setImageSrc('/placeholder.svg')}
+      style={dimensions ? { aspectRatio: `${dimensions.width} / ${dimensions.height}` } : undefined}
     />
   )
 }
@@ -46,13 +68,16 @@ export function ProjectImageCarousel({ images, alt }: ProjectImageCarouselProps)
 
     const timer = setInterval(() => {
       setIndex((i) => (i + 1) % count)
-    }, 3000)
+    }, 5000)
 
     return () => clearInterval(timer)
   }, [count])
 
   return (
-    <div className="group/carousel relative h-full w-full">
+    <div
+      className="group/carousel relative w-full overflow-hidden"
+      style={{ aspectRatio: '1918 / 991' }}
+    >
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={index}

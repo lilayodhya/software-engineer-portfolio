@@ -29,8 +29,8 @@ export function Hero() {
           '-=0.5',
         )
         .from(
-          '[data-hero="cta"] > *',
-          { y: 16, opacity: 0, duration: 0.6, stagger: 0.1 },
+          '[data-hero="cta"]',
+          { y: 16, opacity: 0, duration: 0.6 },
           '-=0.5',
         )
     }, rootRef)
@@ -83,13 +83,13 @@ export function Hero() {
         >
           I&apos;m Saarthakk, a 20 year old Computer Engineering student who spends his time 
           building projects and exploring tech. I've worked on web applications, automation tools, AI, and business focused software.
-          I'm still figuring out my place in the world and I'm passionate about generating value.  
+          I'm still figuring out my place in the world and I'm passionate about generating value.
         </p>
 
-        <div data-hero="cta" className="mt-10 flex flex-wrap items-center gap-3">
+        <div data-hero="cta" className="mt-10 flex flex-nowrap items-center gap-2 sm:gap-3">
           <a
             href="#contact"
-            className="group inline-flex h-11 items-center gap-2 rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-transform duration-300 hover:scale-[1.03]"
+            className="group inline-flex h-11 shrink-0 items-center gap-2 rounded-full bg-primary px-4 text-sm font-medium text-primary-foreground transition-transform duration-300 hover:scale-[1.03] sm:px-6"
           >
             Get in touch
             <ArrowDownRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
@@ -104,7 +104,7 @@ export function Hero() {
             <GithubIcon className="size-5" />
           </a>
           <a
-            href="www.linkedin.com/in/saarthakk-suri-275424235"
+            href="https://www.linkedin.com/in/saarthakk-suri-275424235"
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"

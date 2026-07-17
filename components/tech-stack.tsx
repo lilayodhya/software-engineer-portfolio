@@ -14,11 +14,11 @@ const groups = [
   },
   {
     label: 'Backend',
-    items: ['Node.js', 'PostgreSQL'],
+    items: ['Node.js', 'PostgreSQL', 'MongoDB'],
   },
   {
     label: 'Infrastructure',
-    items: ['AWS', 'Kubernetes', 'Docker', 'Terraform', 'Vercel'],
+    items: ['Salesforce', 'AWS', 'Docker', 'PowerBI', 'Vercel'],
   },
 ]
 

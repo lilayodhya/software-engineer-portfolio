@@ -11,7 +11,6 @@ const socials = [
   { label: 'Email', value: 'saarthakksuri@gmail.com', href: 'mailto:saarthakksuri@gmail.com' },
   { label: 'GitHub', value: '@_____________', href: 'https://github.com' },
   { label: 'LinkedIn', value: 'in/saarthakksuri', href: 'https://www.linkedin.com/in/saarthakk-suri-275424235' },
-  { label: 'X', value: '@___________', href: 'https://x.com' },
 ]
 
 export function Contact() {
@@ -54,7 +53,7 @@ export function Contact() {
           <ArrowUpRight className="size-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
         </a>
 
-        <div className="mt-20 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-20 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {socials.map((s) => (
             <a
               key={s.label}

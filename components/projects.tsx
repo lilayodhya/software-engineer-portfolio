@@ -23,37 +23,50 @@ const projects: Project[] = [
     description:
       'A complete real estate platform combining a public-facing property website with a secure CRM dashboard. Built to manage listings, leads, and client interactions from a single system while keeping website content synchronized with CRM updates.',
     images: [
-      '/projects/landmark/01.png',
-      '/projects/landmark/02.png',
-      '/projects/landmark/03.png',
+      '/projects/landmark.png',
+      '/projects/landmark1.png',
+      '/projects/landmark2.png',
     ],
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
   },
   {
-    title: 'Overtime Report Analyzer',
+    title: 'CargoIQ — Shipping volume & weight management dashboard',
+    year: '2026',
+    category: 'LOGISTICS TOOL',
+    description:
+      'Developed a full-stack logistics application for shipment planning and container utilization analysis. Implemented product catalog management, CBM calculations, gross/net weight tracking, freight mode selection, shipment aggregation, container fill monitoring, and PDF/Excel export functionality to streamline logistics operations.',
+    images: [
+      '/projects/cbm-calculator.png',
+      '/projects/cbm-calculator1.png',
+      '/projects/cbm-calculator2.png',
+    ],
+    tags: ['JavaScript', 'HTML', 'MSSQL', 'CSS'],
+  },
+  {
+    title: 'Minerva — GST Automation Tool',
+    year: '2026',
+    category: 'FINANCE & TAXATION',
+    description:
+      'A full-stack web application that automates GST report generation for Indian businesses. The system accepts sales data in any CSV format, uses AI to intelligently map columns from any accounting software export (Tally, Zoho Books, QuickBooks, Busy Accounting), calculates CGST, SGST, and IGST across domestic and international transactions, and generates structured GSTR-1 and GSTR-3B Excel reports.',
+    images: [
+      '/projects/gstr-report-automation.png',
+      '/projects/gstr-report-automation1.png',
+      '/projects/gstr-report-automation2.png',
+    ],
+    tags: ['JavaScript', 'Python', 'CSS', 'HTML', 'Gemini AI'],
+  },
+  {
+    title: 'ShiftSync — Overtime Report Analyzer',
     year: '2026',
     category: 'BUSINESS AUTOMATION',
     description:
       'An internal tool that automates overtime calculations and report generation for HR teams. The system processes attendance data, performs calculations automatically, and generates structured reports, reducing manual effort and improving reporting accuracy.',
     images: [
-      '/projects/overtime-report-analyzer/01.png',
-      '/projects/overtime-report-analyzer/02.png',
-      '/projects/overtime-report-analyzer/03.png',
+      '/projects/overtime-report-analyzer.png',
+      '/projects/overtime-report-analyzer1.png',
+      '/projects/overtime-report-analyzer2.png',
     ],
-    tags: ['Python', 'n8n', 'Automation'],
-  },
-  {
-    title: 'CBM Calculator',
-    year: '2026',
-    category: 'LOGISTICS TOOL',
-    description:
-      'A logistics planning application that calculates shipment volume requirements instantly. Users can select products from a centralized catalog, enter quantities, and receive accurate CBM calculations without manual measurements or spreadsheets.',
-    images: [
-      '/projects/cbm-calculator.png',
-      '/projects/cbm-calculator1.png',
-      '/projects/cbm-calculator/03.png',
-    ],
-    tags: ['React Native', 'AI SDK', 'SQLite', 'Edge'],
+    tags: ['Python', 'Automation', 'Gemini AI'],
   },
   {
     title: 'Medistore',
@@ -62,9 +75,9 @@ const projects: Project[] = [
     description:
       'A healthcare management platform designed to simplify access to medical information. The application supports digital medical records, prescriptions, appointment management, and role-based access for patients, doctors, and administrators.',
     images: [
-      '/projects/medistore/01.png',
-      '/projects/medistore/02.png',
-      '/projects/medistore/03.png',
+      '/projects/medistore.png',
+      '/projects/medistore1.png',
+      '/projects/medistore2.png',
     ],
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
   },
@@ -89,8 +102,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     >
       <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
         <div className={index % 2 === 1 ? 'md:order-2' : 'md:order-1'}>
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-card">
-            <motion.div style={{ y }} className="relative aspect-[16/11] w-full">
+          <div className="relative overflow-hidden rounded-2xl border border-border bg-card p-2 sm:p-3">
+            <motion.div
+              style={{ y }}
+              className="relative w-full overflow-hidden rounded-[calc(theme(borderRadius.2xl)-0.25rem)]"
+            >
               <ProjectImageCarousel
                 images={project.images}
                 alt={`${project.title} — ${project.category}`}

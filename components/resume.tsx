@@ -19,23 +19,23 @@ const roles: Role[] = [
     period: 'Summer 2026',
     summary:
       '',
-    stack: ['SQL', 'Python', 'MERN'],
+    stack: ['SQL', 'Python', 'MERN', 'PowerBI', 'AI'],
   },
   {
-    company: 'Sunxora Ventures',
+    company: 'Sunxora Ventures | Under mentorship of Dr. Sandeep Arora',
     role: 'Intern',
     period: 'Summer 2025',
     summary:
-      '',
-    stack: ['React', 'Ruby', 'GraphQL'],
+      'Conducted data-driven market research across Cybersecurity, ESG, and CRM sectors. Evaluated industry trends, competitors, and growth opportunities to support investment analysis and strategic decision-making. Produced research reports and business insights for market positioning initiatives.',
+    stack: ['PowerBI', 'Market Research', 'Data Analysis'],
   },
   {
     company: 'Drnk',
     role: 'Research Intern',
     period: '2023 — 2024',
-    summary:
-      '',
-    stack: ['TypeScript', 'Storybook'],
+    summary: 
+      'Supported market research, business development, and digital marketing initiatives for a consumer startup. Conducted competitor analysis, identified growth opportunities, and contributed to social media content and promotional campaigns.',
+    stack: ['Canva', 'Market Research', 'Data Analysis'],
   },
 ]
 
